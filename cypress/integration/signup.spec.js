@@ -80,6 +80,7 @@ describe('cadastro', function () {
             it('não deve cadastrar com a senha: ' + p, function () {
                 const user = { name: 'Jason Friday', email: 'jason@gmail.com', password: p }
 
+                signupPage.go()
                 signupPage.form(user)
                 signupPage.submit()
             })
@@ -90,7 +91,7 @@ describe('cadastro', function () {
         })
     })
 
-    context.only('quando não preencho nenhum dos campos', function(){
+    context('quando não preencho nenhum dos campos', function(){
         const alertMessages = [
             'Nome é obrigatório',
             'E-mail é obrigatório',
