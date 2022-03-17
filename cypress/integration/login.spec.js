@@ -1,18 +1,24 @@
 
-// Cenários:
+import loginPage from '../support/pages/login'
+import dashPage from '../support/pages/dash'
 
-// 1 - Login com sucesso
-// 2 - Senha incorreta
-// 3 - Email no formato inválido
-// 4 - Campos obrigatórios (dois ITs)
+describe('login', function(){
 
-// Dicas
+    context('quando o usuário é muito bom', function(){
 
-// 1 - Para fazer login, é necessário já ter uma conta cadastrada
-// 2 - Usar contextos
-// 3 - Para fazer o login com sucesso, você deverá componentizar alguma coisa
+        const user = {
+            name: 'Robson Jassa',
+            email: 'jassa@samuraibs.com',
+            password: 'pwd123'
+        }
 
-// Como entregar
+        it('deve logar com sucesso', function(){
+            loginPage.go()
+            loginPage.form(user)
+            loginPage.submit()
 
-// Publicar o no repositório do Github
-// Em seguida, colocar o link aqui em abaixo na sessão de comentários
+            dashPage.header.userLoggedIn(user.name)
+        })
+    })
+
+})

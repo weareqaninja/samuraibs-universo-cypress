@@ -2,7 +2,6 @@
 import signupPage from '../support/pages/signup'
 
 describe('cadastro', function () {
-    
     context('quando o usuário é novato', function () {
         const user = {
             name: 'Fernando Papito',
@@ -109,7 +108,5 @@ describe('cadastro', function () {
             })
         })
     })
-
-
 })
 
