@@ -1,0 +1,23 @@
+{
+  "success": {
+    "name": "Fernando Papito",
+    "email": "papito@samuraibs.com",
+    "password": "pwd123"
+  },
+  "email_dup": {
+    "name": "João Lucas",
+    "email": "joao@samuraibs.com",
+    "password": "pwd123",
+    "is_provider": true
+  },
+  "email_inv": {
+    "name": "Elizabeth Olsen",
+    "email": "liza.yahoo.com",
+    "password": "pwd123"
+  },
+  "short_password": {
+    "name": "Jason Friday",
+    "email": "jason@gmail.com",
+    "password": null
+  }
+}
