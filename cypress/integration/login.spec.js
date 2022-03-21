@@ -78,13 +78,13 @@ describe('login', function () {
                
                 loginPage.form(user)
                 loginPage.submit()
-                loginPage.alertHaveText('Informe um email válido')
+                loginPage.alert.haveText('Informe um email válido')
             })
         })
 
     })
 
-    context.only('quando não preencho nenhum dos campos', function(){
+    context('quando não preencho nenhum dos campos', function(){
         const alertMessages = [
             'E-mail é obrigatório',
             'Senha é obrigatória'
@@ -97,7 +97,7 @@ describe('login', function () {
 
         alertMessages.forEach(function(alert){
             it('deve exibir ' + alert.toLowerCase(), function(){
-                loginPage.alertHaveText(alert)
+                loginPage.alert.haveText(alert)
             })
         })
     })
