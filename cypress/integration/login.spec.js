@@ -36,9 +36,6 @@ describe('login', function () {
         }
 
         before(function () {
-
-            console.log(localStorage.getItem('@Samurai:user'))
-
             cy.postUser(user).then(function () {
                 user.password = 'abc123'
             })
