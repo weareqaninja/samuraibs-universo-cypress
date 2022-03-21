@@ -36,6 +36,9 @@ describe('login', function () {
         }
 
         before(function () {
+
+            console.log(localStorage.getItem('@Samurai:user'))
+
             cy.postUser(user).then(function () {
                 user.password = 'abc123'
             })
@@ -52,7 +55,7 @@ describe('login', function () {
 
     })
 
-    context.only('quando o formato do email é inválido', function () {
+    context('quando o formato do email é inválido', function () {
 
         const emails = [
             'papito.com.br',
@@ -79,6 +82,24 @@ describe('login', function () {
             })
         })
 
+    })
+
+    context.only('quando não preencho nenhum dos campos', function(){
+        const alertMessages = [
+            'E-mail é obrigatório',
+            'Senha é obrigatória'
+        ]
+
+        before(function(){
+            loginPage.go()
+            loginPage.submit()
+        })
+
+        alertMessages.forEach(function(alert){
+            it('deve exibir ' + alert.toLowerCase(), function(){
+                loginPage.alertHaveText(alert)
+            })
+        })
     })
 
 })
