@@ -51,11 +51,6 @@ module.exports = (on, config) => {
           resolve({token: result.rows[0].token})
         })
       })
-
-
-      
-
-
     }
   })
 
