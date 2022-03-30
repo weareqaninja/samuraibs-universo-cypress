@@ -66,9 +66,9 @@ Cypress.Commands.add('createAppointment', function (hour) {
     now.setDate(now.getDate() + 1)
 
     Cypress.env('appointmentDay', now.getDate())
-
-    const date = moment(now).format('YYYY-MM-DD ' + hour + ':00')
-
+   
+    const date = moment(now).format(`YYYY-MM-DD ${hour}:00`)
+    
     const payload = {
         provider_id: Cypress.env('providerId'),
         date: date
