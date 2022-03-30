@@ -9,6 +9,7 @@
     "@faker-js/faker": "^6.0.0-alpha.7",
     "cypress": "^9.5.0",
     "moment": "^2.29.1",
-    "pg": "^8.7.3"
+    "pg": "^8.7.3",
+    "underscore": "^1.13.2"
   }
 }
