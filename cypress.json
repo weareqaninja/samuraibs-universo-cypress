@@ -1,9 +1,8 @@
 {
-    "baseUrl": "https://samuraibs-web-papito.herokuapp.com",
-    "apiServer": "https://samuraibs-api-papito.herokuapp.com",
+    "baseUrl": "http://localhost:3000",
+    "apiServer": "http://localhost:3333",
     "viewportWidth": 1440,
     "viewportHeight": 900,
-    "defaultCommandTimeout": 30000,
     "dbConfig": {
         "host": "jelani.db.elephantsql.com",
         "user": "qgbbfjna",
