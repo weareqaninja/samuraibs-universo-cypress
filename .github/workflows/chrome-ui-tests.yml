@@ -41,7 +41,7 @@ jobs:
           record: true
           parallel: true
           group: 'UI - Chrome'
-          spec: ${{ github.events.inputs.specs }}
+          spec: ${{ github.event.inputs.specs }}
         env:
           TZ: America/Sao_Paulo
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
